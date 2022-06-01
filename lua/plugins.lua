@@ -58,11 +58,16 @@ packer.startup({
 		use("lukas-reineke/indent-blankline.nvim")
 		-- 代码格式化
 		use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+		use({
+			"creativenull/efmls-configs-nvim",
+			requires = { "neovim/nvim-lspconfig" },
+		})
 		-- JSON 增强
 		use("b0o/schemastore.nvim")
 		use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
 		-- 代码自动注释
 		use("numToStr/Comment.nvim")
+		use("JoosepAlviste/nvim-ts-context-commentstring")
 		-- easymotion 替代方案
 		use({
 			"phaazon/hop.nvim",
