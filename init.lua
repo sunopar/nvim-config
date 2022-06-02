@@ -19,6 +19,7 @@ require("plugin-config.comment")
 require("plugin-config.hop")
 require("plugin-config.gitsigns")
 require("plugin-config.aerial")
+require("plugin-config.diffview")
 
 -- 内置LSP
 require("lsp.setup") -- 管理LSP安装卸载，以及语言配置
