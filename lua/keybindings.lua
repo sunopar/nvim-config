@@ -457,10 +457,7 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
 			full = true,
 		})
 	end)
-	map("n", "<leader>gd", gs.diffthis)
-	map("n", "<leader>gD", function()
-		gs.diffthis("~")
-	end)
+	map("n", "<leader>gd", ":DiffviewOpen<CR>")
 	-- toggle
 	map("n", "<leader>gtd", gs.toggle_deleted)
 	map("n", "<leader>gtb", gs.toggle_current_line_blame)
