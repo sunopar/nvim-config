@@ -131,6 +131,9 @@ map("n", "Z", ":foldopen<CR>", opt)
 
 -- nvim-tree
 map("n", "<leader>e", ":NvimTreeToggle<CR>", opt) -- explorer
+
+-- terminal
+map("n", "<leader>t", ":ToggleTerm<CR>", opt) -- explorer
 -- 列表快捷键
 pluginKeys.nvimTreeList = { -- 打开文件或文件夹
 	{

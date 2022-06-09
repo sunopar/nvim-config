@@ -104,6 +104,14 @@ packer.startup({
 				require("aerial").setup()
 			end,
 		})
+		-- terminal 终端
+		use({
+			"akinsho/toggleterm.nvim",
+			tag = "v1.*",
+			config = function()
+				require("toggleterm").setup()
+			end,
+		})
 	end,
 	config = {
 		display = {
