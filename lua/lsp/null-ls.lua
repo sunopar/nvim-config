@@ -37,13 +37,14 @@ null_ls.setup({
 		-- Python
 		-- pip install black
 		-- asdf reshim python
-		formatting.black.with({ extra_args = { "--fast" } }),
+		-- formatting.black.with({ extra_args = { "--fast" } }),
 		-----------------------------------------------------
 		-----------------------------------------------------
 		-- formatting.fixjson,
 		-- Diagnostics  ---------------------
 		diagnostics.eslint_d.with({
 			prefer_local = "node_modules/.bin",
+			method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
 		}),
 		-- diagnostics.markdownlint,
 		-- markdownlint-cli2
