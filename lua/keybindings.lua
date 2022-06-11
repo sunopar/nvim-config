@@ -21,7 +21,6 @@ map("v", "$", "g_", opt)
 map("v", "g_", "$", opt)
 map("n", "$", "g_", opt)
 map("n", "g_", "$", opt)
-
 -- y复制到粘贴板
 map("v", "y", '"+y', opt)
 
@@ -132,8 +131,6 @@ map("n", "Z", ":foldopen<CR>", opt)
 -- nvim-tree
 map("n", "<leader>e", ":NvimTreeToggle<CR>", opt) -- explorer
 
--- terminal
-map("n", "<leader>t", ":ToggleTerm<CR>", opt) -- explorer
 -- 列表快捷键
 pluginKeys.nvimTreeList = { -- 打开文件或文件夹
 	{
@@ -462,7 +459,6 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
 		})
 	end)
 	map("n", "<leader>gd", ":DiffviewOpen<CR>")
-	map("n", "<leader>dc", ":DiffviewClose<CR>")
 	-- toggle
 	map("n", "<leader>gtd", gs.toggle_deleted)
 	map("n", "<leader>gtb", gs.toggle_current_line_blame)
