@@ -233,7 +233,8 @@ map("n", "<leader>bo", ":BufferLineCloseRight<CR>:BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bp", ":BufferLinePickClose<CR>", opt)
 
 -- Telescope
-map("n", "<leader>p", ":Telescope find_files<CR>", opt)
+map("n", "<leader>f", ":Telescope find_files<CR>", opt)
+map("n", "<leader>p", ":Telescope frecency<CR>", opt)
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 map("n", "<C-r>", ":Telescope projects<CR>", opt)
 -- Telescope 列表中 插入模式快捷键
