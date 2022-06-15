@@ -56,6 +56,13 @@ packer.startup({
 		use("tami5/lspsaga.nvim")
 		-- indent-blankline
 		use("lukas-reineke/indent-blankline.nvim")
+		-- highligh cursor word
+		use({
+			"yamatsum/nvim-cursorline",
+			config = function()
+				require("nvim-cursorline").setup()
+			end,
+		})
 		-- 代码格式化
 		use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 		use({
