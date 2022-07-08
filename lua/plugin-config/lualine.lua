@@ -15,6 +15,16 @@ local function gps_content()
 		return ""
 	end
 end
+local function diff_source()
+  local gitsigns = vim.b.gitsigns_status_dict
+  if gitsigns then
+    return {
+      added = gitsigns.added,
+      modified = gitsigns.changed,
+      removed = gitsigns.removed
+    }
+  end
+end
 lualine.setup({
 	options = {
 		theme = "tokyonight",
@@ -24,7 +34,7 @@ lualine.setup({
 	},
 	extensions = { "nvim-tree", "toggleterm" },
 	sections = {
-		lualine_b = { "branch", "diff" },
+    lualine_b = { {'diff', source = diff_source}, },
 		lualine_c = {
 			{ gps_content, cond = gps.is_available },
 			{

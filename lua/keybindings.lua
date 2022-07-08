@@ -75,7 +75,7 @@ map("v", "K", ":move '<-2<CR>gv-gv", opt)
 map("v", "p", '"_dP', opt)
 
 -- 退出
-map("n", "qq", "<cmd>lua require('utils.functions').smart_quit()<CR>", opt)
+map("n", "qq", ":q!<CR>", opt)
 map("n", "<leader>q", ":qa!<CR>", opt)
 
 -- insert 模式下，跳到行首行尾
