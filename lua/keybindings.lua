@@ -22,7 +22,7 @@ map("v", "g_", "$", opt)
 map("n", "$", "g_", opt)
 map("n", "g_", "$", opt)
 -- y复制到粘贴板
-map("v", "y", '"+y', opt)
+map("v", "y", '"*y', opt)
 
 -- 命令行下 Ctrl+j/k  上一个下一个
 map("c", "<C-j>", "<C-n>", {
