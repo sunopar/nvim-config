@@ -34,7 +34,7 @@ lualine.setup({
 	},
 	extensions = { "nvim-tree", "toggleterm" },
 	sections = {
-    lualine_b = { {'diff', source = diff_source}, },
+    -- lualine_b = { {'diff', source = diff_source}, },
 		lualine_c = {
 			{ gps_content, cond = gps.is_available },
 			{
@@ -52,7 +52,7 @@ lualine.setup({
 		-- },
 		lualine_x = { "diagnostics" },
 		lualine_y = {
-			{ "filetype", colored = true, icon_only = true },
+			{ "filetype", colored = true, icon_only = false },
 			-- {
 			-- 	"fileformat",
 			-- 	symbols = {

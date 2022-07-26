@@ -99,15 +99,11 @@ map("n", "<leader>j", "<C-w>j", opt)
 map("n", "<leader>k", "<C-w>k", opt)
 map("n", "<leader>l", "<C-w>l", opt)
 -- 左右比例控制
-map("n", "<C-Left>", ":vertical resize -2<CR>", opt)
-map("n", "<C-Right>", ":vertical resize +2<CR>", opt)
 map("n", "s.", ":vertical resize -10<CR>", opt)
 map("n", "s,", ":vertical resize +10<CR>", opt)
 -- 上下比例
 map("n", "sj", ":resize +10<CR>", opt)
 map("n", "sk", ":resize -10<CR>", opt)
-map("n", "<C-Down>", ":resize +2<CR>", opt)
-map("n", "<C-Up>", ":resize -2<CR>", opt)
 -- 相等比例
 map("n", "s=", "<C-w>=", opt)
 
@@ -281,9 +277,9 @@ pluginKeys.mapLSP = function(mapbuf)
 	-- rename
 	--[[
   Lspsaga 替换 rn
-  mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
-  --]]
 	mapbuf("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opt)
+  --]]
+  mapbuf("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
 	-- code action
 	--[[
   Lspsaga 替换 ca
@@ -292,12 +288,13 @@ pluginKeys.mapLSP = function(mapbuf)
 	mapbuf("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opt)
 	-- go xx
 	-- mapbuf("n", "gd", "<cmd>Lspsaga preview_definition<CR>", opt)
-	mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
+	-- mapbuf("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
+  mapbuf("n", "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions({ initial_mode = 'normal', })<CR>", opt)
 	--[[
   Lspsaga 替换 gh
-  mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
-  --]]
 	mapbuf("n", "gh", "<cmd>Lspsaga hover_doc<cr>", opt)
+  --]]
+   mapbuf("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
 	--[[
   Lspsaga 替换 gr
   mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
