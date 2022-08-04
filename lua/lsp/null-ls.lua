@@ -55,7 +55,7 @@ null_ls.setup({
 		-- }),
 		--
 		-- code actions ---------------------
-		code_actions.gitsigns,
+		-- code_actions.gitsigns,
 		code_actions.eslint_d.with({
 			prefer_local = "node_modules/.bin",
 		}),
