@@ -35,7 +35,7 @@ lualine.setup({
 	extensions = { "nvim-tree", "toggleterm" },
 	sections = {
     -- lualine_b = { {'diff', source = diff_source}, },
-		lualine_c = {
+		lualine_b = {
 			{ gps_content, cond = gps.is_available },
 			{
 				"lsp_progress",

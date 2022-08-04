@@ -80,9 +80,9 @@ packer.startup({
 			"phaazon/hop.nvim",
 			branch = "v1", -- optional but strongly recommended
 		})
-		use({
-			"lewis6991/gitsigns.nvim",
-		})
+		-- use({
+		-- 	"lewis6991/gitsigns.nvim",
+		-- })
 		-- 展示有哪些keybindings
 		use({
 			"folke/which-key.nvim",
